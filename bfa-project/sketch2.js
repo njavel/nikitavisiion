@@ -141,3 +141,13 @@ let sketch = function (p) {
 };
 
 let myp5 = new p5(sketch);
+
+// uncomment this stuff below if you want the page to auto-refresh after a certain amount of time
+
+// setTimeout(function() {
+
+//   // refresh the page by setting the URL to what the URL already is.
+//   window.location.href = window.location.href;
+
+// // num milliseconds between page refreshes
+// }, 100000)
