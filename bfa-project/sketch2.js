@@ -81,7 +81,7 @@ let sketch = function (p) {
         case 7:
           p.model(TEETH);
           break;
-        case 5:
+        case 14:
           p.model(treeone);
           break;
       }
