@@ -70,7 +70,6 @@ let sketch = function (p) {
       p.scale(5);
       p.normalMaterial();
 
-      // p.ellipse(0, 0, 10, 10);
 
       // a more efficient if/else thingy (https://www.w3schools.com/js/js_switch.asp)
 
@@ -84,6 +83,8 @@ let sketch = function (p) {
         case 8:
           p.model(TEETH);
           break;
+          p.ellipse(0, 0, 10, 10);
+
       }
 
       p.pop();
