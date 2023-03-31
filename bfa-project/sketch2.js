@@ -60,7 +60,7 @@ let sketch = function (p) {
     // p.pop();
 
     // add points to this array for each poseKeypoint you want to draw something on.
-    const myPosePoints = [0, 7, 8, 9, 10];
+    const myPosePoints = [0, 7, 8, 9, 10,24];
 
     for (let i = 0; i < myPosePoints.length; i++) {
       const curPoint = myPosePoints[i];
