@@ -3,19 +3,27 @@
 // Adapted from "Multiple Hands Detection in p5.js" by Kazuki Umeda (https://www.youtube.com/watch?v=BX8ibqq0MJU)
 
 let sketch = function (p) {
-  let treeone;
-  let TEETH;
-  let ear;
-  let ty;
+  let nails;
+  let eye;
+  let dag;
+  let erduo;
+  let shoulder;
+  let band;
+  let band2;
+  let tubig;
   let font;
   let img;
 
   p.preload = function () {
     font = p.loadFont("Poppins-Medium.ttf");
-    treeone = p.loadModel("treeone.obj");
-    TEETH = p.loadModel("TEETH.obj");
-    ty = p.loadModel("ty.obj");
-    img = p.loadImage("chrys.png");
+    nails = p.loadModel("nails.obj");
+    dag = p.loadModel("dag.obj");
+    erduo = p.loadModel("erduo.obj");
+    shoulder = p.loadModel("shoulder.obj");
+    band = p.loadModel("band.obj");
+    band2 = p.loadModel("band2.obj");
+    eye = p.loadModel("eye.obj");
+    tubig = p.loadModel("tubig.obj");
   };
 
   p.setup = function () {
@@ -61,7 +69,7 @@ let sketch = function (p) {
     // p.pop();
 
     // add points to this array for each poseKeypoint you want to draw something on.
-    const myPosePoints = [0, 7, 8, 9, 10,23];
+    const myPosePoints = [0,3,6,7,8,9,11,12,13,14,23,25,26,27,28];
 
     for (let i = 0; i < myPosePoints.length; i++) {
       const curPoint = myPosePoints[i];
@@ -71,22 +79,89 @@ let sketch = function (p) {
       p.scale(5);
       p.normalMaterial();
 
+     
+
 
       // a more efficient if/else thingy (https://www.w3schools.com/js/js_switch.asp)
 
       switch (curPoint) {
-        case 0:
-          p.model(treeone);
-          break;
+        case 3:
+          p.scale(3);
+          p.model(eye);
+        break;
+        case 6:
+          p.scale(3);
+          p.model(eye);
+      
+        break;
         case 7:
-          p.model(ear);
-          break;
+          p.translate(-10,20,0);
+          p.scale(1);
+          p.rotateY(15);
+          p.model(erduo);
+
+        break;
         case 8:
-          p.model(ear);
-          break;
-         case 23:
-         // p.model(ear);
-          break;
+          p.translate(10,20,0);
+          p.scale(1);
+          p.rotateY(-15);
+          p.model(erduo);
+        break;
+        case 8:
+          p.translate(10,20,0);
+          p.scale(1);
+          p.rotateY(-15);
+          p.model(erduo);
+        break;
+        break;
+        case 11:
+          p.scale(4);
+          p.rotateZ(180);
+          p.model(shoulder);
+        break;
+        case 12:
+          p.scale(4);
+          p.rotateZ(180);
+          p.model(shoulder);
+        break;
+        case 13:
+          p.scale(1);
+          p.rotateZ(180);
+          p.model(band);
+        break;
+        case 14:
+          p.scale(2);
+          p.rotateZ(180);
+          p.model(band2);
+  
+        break;
+        case 23:
+          p.scale(15);
+          p.rotateX(-60);
+          p.model(dag);
+        break;
+        case 25:
+          p.scale(1);
+          p.rotateX(-60);
+          p.model(band);
+        break;
+        case 26:
+          p.scale(2);
+          p.rotateX(-60);
+          p.model(band2);
+        break;
+        case 27:
+          p.scale(3);
+          //p.rotateX(-60);
+          p.model(tubig);
+        break;
+        case 28:
+          p.scale(3);
+          //p.rotateX(-60);
+          p.model(tubig);
+          
+        break;
+  
       }
 
       p.pop();
@@ -97,7 +172,7 @@ let sketch = function (p) {
     p.stroke(0);
     p.strokeWeight(8);
 
-    const myHandPoints = [4, 8, 12, 16, 20, 0];
+    const myHandPoints = [4, 8, 12, 16, 20];
 
     // const THUMB = hand[4];
     // const INDEX_FINGER = hand[8];
@@ -112,10 +187,14 @@ let sketch = function (p) {
       p.fill(255, 0, 255);
       p.push();
       p.translate(p.width - handFeature.x * p.width, handFeature.y * p.height, 0);
-      p.scale(5);
+      p.scale(15);
+      //p.rotateY(180);
+      p.rotateX(360);
       p.normalMaterial();
-     // p.model(treeone);
+      p.model(nails);
       p.pop();
+
+  
     }
 
     for (let i = 0; i < hand.length; i++) {
@@ -125,9 +204,9 @@ let sketch = function (p) {
 
       p.strokeWeight(2);
 
-      // p.text(z.toFixed(3), x, y, z);
-      p.fill(0, 255, 255);
-      p.text("TE$T", x, y, z);
+   // p.text(z.toFixed(3), x, y, z);
+      p.fill(255, 187, 0);
+      p.text("pangangalaga sa sarili", x, y, z);
       p.textSize(15);
 
       // 1calculate how far the hand is from the camera by calculating the distance between keypoints 9 and 13 (base of middle and ring finger)
@@ -145,15 +224,15 @@ let sketch = function (p) {
     }
   };
 };
-
+//p.background(255,0,255);
 let myp5 = new p5(sketch);
 
 // uncomment this stuff below if you want the page to auto-refresh after a certain amount of time
 
-// setTimeout(function() {
+setTimeout(function() {
 
 //   // refresh the page by setting the URL to what the URL already is.
-//   window.location.href = window.location.href;
+window.location.href = window.location.href;
 
-// // num milliseconds between page refreshes
-// }, 100000)
+ //num milliseconds between page refreshes
+ }, 900000);
