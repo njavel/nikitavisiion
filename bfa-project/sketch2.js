@@ -5,6 +5,7 @@
 let sketch = function (p) {
   let treeone;
   let TEETH;
+  let daggg;
   let ty;
   let font;
   let img;
@@ -60,7 +61,7 @@ let sketch = function (p) {
     // p.pop();
 
     // add points to this array for each poseKeypoint you want to draw something on.
-    const myPosePoints = [0, 7, 8, 9, 10,24];
+    const myPosePoints = [0, 7, 8, 9, 10,23];
 
     for (let i = 0; i < myPosePoints.length; i++) {
       const curPoint = myPosePoints[i];
@@ -83,8 +84,9 @@ let sketch = function (p) {
         case 8:
           p.model(TEETH);
           break;
-          p.ellipse(0, 0, 10, 10);
-
+         case 23:
+          p.model(daggg);
+          break;
       }
 
       p.pop();
