@@ -82,7 +82,7 @@ let sketch = function (p) {
           p.model(ear);
           break;
         case 8:
-          p.model(TEETH);
+          p.model(ear);
           break;
          case 23:
          // p.model(ear);
