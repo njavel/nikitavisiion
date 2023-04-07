@@ -114,7 +114,7 @@ let sketch = function (p) {
       p.translate(p.width - handFeature.x * p.width, handFeature.y * p.height, 0);
       p.scale(5);
       p.normalMaterial();
-      p.model(treeone);
+     // p.model(treeone);
       p.pop();
     }
 
