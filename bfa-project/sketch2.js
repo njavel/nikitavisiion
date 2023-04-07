@@ -5,7 +5,7 @@
 let sketch = function (p) {
   let treeone;
   let TEETH;
-  let daggg;
+ // let daggg;
   let ty;
   let font;
   let img;
