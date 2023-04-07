@@ -5,7 +5,7 @@
 let sketch = function (p) {
   let treeone;
   let TEETH;
- // let daggg;
+  let ear;
   let ty;
   let font;
   let img;
@@ -79,13 +79,13 @@ let sketch = function (p) {
           p.model(treeone);
           break;
         case 7:
-          p.model(TEETH);
+          p.model(ear);
           break;
         case 8:
           p.model(TEETH);
           break;
          case 23:
-          p.model(TEETH);
+         // p.model(ear);
           break;
       }
 
