@@ -85,7 +85,7 @@ let sketch = function (p) {
           p.model(TEETH);
           break;
          case 23:
-          p.model(daggg);
+          p.model(TEETH);
           break;
       }
 
