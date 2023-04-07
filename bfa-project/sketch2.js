@@ -125,7 +125,7 @@ let sketch = function (p) {
           p.model(shoulder);
         break;
         case 13:
-          p.scale(1);
+          p.scale(2);
           p.rotateZ(180);
           p.model(band);
         break;
@@ -141,7 +141,7 @@ let sketch = function (p) {
           p.model(dag);
         break;
         case 25:
-          p.scale(1);
+          p.scale(2);
           p.rotateX(-60);
           p.model(band);
         break;
