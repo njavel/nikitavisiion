@@ -20,8 +20,8 @@ const videoElement = document.getElementsByClassName("input_video")[0];
 // 960 x 540
 // 1280 x 720
 
-const cam_w = 540; // 1280
-const cam_h = 960; // 720
+const cam_w = 1280; // 1280
+const cam_h = 720; // 720
 
 function gotHolistic(results) {
   detections = results;
